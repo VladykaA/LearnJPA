@@ -1,9 +1,3 @@
-Person(fields), Address(fields)(embeddable)
-1) Select by name, age, by address
-2) Update by name...
-3) Delete by name...
-
-
 Организовать приложение касса вокзала.
 Приложение должно позволять:
 1) Создавать рейс(количество вагонов, класс удобства(использовать enum),

@@ -2,6 +2,9 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default">
+        <processor name="org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor" />
+      </profile>
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -9,5 +12,10 @@
         <module name="LearnJPA" />
       </profile>
     </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="LearnJPA" options="-processor org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor" />
+    </option>
   </component>
 </project>

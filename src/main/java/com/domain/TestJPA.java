@@ -16,18 +16,18 @@ public class TestJPA {
 
         tran.begin();
 
-        Man man = new Man("Graham", 25);
+        Man man = new Man("Ben", 35);
 
         man.setPhone(Phone.FAX);
 
-        Region region = new Region("My", 120);
+        Region region = new Region("Kiev", 120);
 
         man.setRegion(region);
 
         man.setDate(new Date());
         man.setTime(LocalDateTime.now());
 
-//        em.persist(man);
+        em.persist(man);
         Man man1 = em.find(Man.class, 1);
 
 //        man1.setAge(120);
