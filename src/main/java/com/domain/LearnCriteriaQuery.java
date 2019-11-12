@@ -73,3 +73,39 @@ class LearnCriteriaUpdate {
         em.close();
     }
 }
+
+class LearnMultiSelectCriteria {
+    public static void main(String[] args) {
+        EntityManagerFactory factory = Persistence.createEntityManagerFactory("test_jpa");
+
+        EntityManager em = factory.createEntityManager();
+
+        EntityTransaction tran = em.getTransaction();
+
+        tran.begin();
+
+        CriteriaBuilder builder = em.getCriteriaBuilder();
+
+        CriteriaQuery<Tuple> tupleQuery = builder.createTupleQuery();
+
+        Root<Man> root = tupleQuery.from(Man.class);
+
+        Path<Integer> pathId = root.get(Man_.id);
+
+        Path<String> pathName = root.get(Man_.name);
+
+        tupleQuery.multiselect(pathId, pathName);
+
+        TypedQuery<Tuple> query = em.createQuery(tupleQuery);
+
+        List<Tuple> list = query.getResultList();
+
+        list.forEach(tuple -> {
+            System.out.println(tuple.get(pathId) + "\t" + tuple.get(pathName));
+        });
+
+        tran.commit();
+
+        em.close();
+    }
+}
