@@ -18,17 +18,17 @@ public class TestManyToManyUni {
 
         tran.begin();
 
-       Citizen citizen = new Citizen("Ben");
-       Citizen citizen1 = new Citizen("John");
+        Citizen citizen = new Citizen("Ben");
+        Citizen citizen1 = new Citizen("John");
 
-       City city = new City("Kiev");
-       City city1 = new City("Dnepr");
+        City city = new City("Kiev");
+        City city1 = new City("Dnepr");
 
-       city.addCitizen(citizen);
-       city.addCitizen(citizen1);
+        city.addCitizen(citizen);
+        city.addCitizen(citizen1);
 
-       city1.addCitizen(citizen);
-       city1.addCitizen(citizen1);
+        city1.addCitizen(citizen);
+        city1.addCitizen(citizen1);
 
         em.persist(city);
         em.persist(city1);
