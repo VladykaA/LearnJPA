@@ -6,16 +6,18 @@
     <persistence-unit name="test_jpa">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
-        <class>com.domain.Man</class>
+<!--        <class>com.domain.Man</class>-->
+        <class>com.relationship.one_to_many.bi.Leaf</class>
+        <class>com.relationship.one_to_many.bi.Tree</class>
 
         <properties>
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/learn_jpa?serverTimezone=UTC"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/inheritance_jpa?serverTimezone=UTC"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="Qwerty11"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect"/>
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
-<!--            <property name="hibernate.hbm2ddl" value="update"/>-->
+<!--            <property name="hibernate.hbm2ddl.auto" value="create"/>-->
+            <property name="hibernate.hbm2ddl" value="update"/>
             <property name="hibernate.show_sql" value="true"/>
         </properties>
     </persistence-unit>

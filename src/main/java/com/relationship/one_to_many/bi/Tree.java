@@ -12,7 +12,7 @@ public class Tree {
 
     private String name;
 
-    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "tree")
+    @OneToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE}, mappedBy = "tree", orphanRemoval = true, fetch = FetchType.EAGER)
     private List<Leaf> leaves = new ArrayList<>();
 
     public Tree(String name) {

@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 
 public class TestOneToOneUni {
     public static void main(String[] args) {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("test_jpa");
+        /*EntityManagerFactory factory = Persistence.createEntityManagerFactory("test_jpa");
 
         EntityManager em = factory.createEntityManager();
 
@@ -26,6 +26,6 @@ public class TestOneToOneUni {
         tran.commit();
 
         em.close();
-        factory.close();
+        factory.close();*/
     }
 }

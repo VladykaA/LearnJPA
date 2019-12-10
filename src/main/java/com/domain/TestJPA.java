@@ -8,7 +8,7 @@ import java.util.List;
 
 public class TestJPA {
     public static void main(String[] args) {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("test_jpa");
+        /*EntityManagerFactory factory = Persistence.createEntityManagerFactory("test_jpa");
 
         EntityManager em = factory.createEntityManager();
 
@@ -37,7 +37,7 @@ public class TestJPA {
         tran.commit();
 
         em.close();
-        factory.close();
+        factory.close();*/
     }
 }
 

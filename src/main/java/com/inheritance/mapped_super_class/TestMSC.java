@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 
 public class TestMSC {
     public static void main(String[] args) {
-        EntityManagerFactory factory = Persistence.createEntityManagerFactory("test_jpa");
+  /*      EntityManagerFactory factory = Persistence.createEntityManagerFactory("test_jpa");
 
         EntityManager em = factory.createEntityManager();
 
@@ -22,6 +22,6 @@ public class TestMSC {
         tran.commit();
 
         em.close();
-
+*/
     }
 }
